@@ -1,0 +1,562 @@
+@font-face {
+    font-family:"TTLakes" ;
+    src: url("fonts/TTLakes-Light.woff");
+    font-weight:300;
+    font-style:normal;
+}
+
+@font-face {
+    font-family:"TTLakes" ;
+    src: url("fonts/TTLakes-Regular.woff");
+    font-weight:400;
+    font-style:normal;
+}
+
+
+@font-face {
+    font-family:"TTLakes" ;
+    src: url("fonts/TTLakes-Medium.woff");
+    font-weight:500;
+    font-style:normal;
+}
+
+
+@font-face {
+    font-family:"TTLakes" ;
+    src: url("fonts/TTLakes-Bold.woff");
+    font-weight:700;
+    font-style:normal;
+}
+
+@font-face {
+    font-family:"TTLakes" ;
+    src: url("fonts/TTLakes-Black.woff");
+    font-weight:900;
+    font-style:normal;
+}
+
+
+
+*, *::after, *::before {
+    margin:0;
+    padding:0;
+    border:none;
+    background:none;
+    list-style-type:none;
+    text-decoration:none;
+}
+
+
+
+html {
+    box-sizing: border-box;
+    
+  }
+
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+  body {
+    font-size:14px;
+    line-height:1.2;
+    font-family:"TTLakes", sans-serif;
+    background:white;
+}
+
+
+.wrapper {
+    max-width:1120px;
+    background-color:#F8F8F8;
+    margin:0 auto;
+ 
+    
+}
+
+
+.wrapper__container {
+    margin-left:auto;
+    margin-right:auto;
+   
+}
+
+.header__container {
+    display:flex;
+    flex-wrap:wrap;
+    flex-direction:column;
+    width:100%;
+}
+
+
+.header__menu {
+    display:flex;
+    border-bottom:1px solid #D9FFF5;
+    background-color:white;
+    margin-bottom:24px;
+    
+}
+
+.header__buttons {
+    position:relative;
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:space-evenly;
+}
+
+.header__buttons:nth-child(2) {
+    display:none;
+}
+
+.header__buttons:first-child {
+    min-width:186px;
+}
+
+
+.header__buttons:last-child::before {
+    content:"";
+    height: 32px;
+    width: 2px;
+    background-color:#EAEAEA;
+    border-radius: 1px;
+    position:absolute;
+    left:-2px;
+
+
+}
+
+.header__button {
+    padding-top:24px;
+    padding-bottom:24px;
+    cursor:pointer;
+}
+
+
+.header__imagebox {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    background-color:#FF3E79;
+}
+
+
+.header__text {
+    position:relative;
+
+}
+
+.header__title {
+    margin-left:15px;
+    margin-bottom:24px;
+}
+
+
+.header__text::before {
+    position:absolute;
+    top:-2px;
+    content:"";
+    display:flex;
+    border:1px solid #41F6D7;
+    width:4px;
+    height:40px;
+    background-color:#41F6D7;
+    border-top-right-radius:5px;
+    border-bottom-right-radius:5px;
+  
+}
+
+
+
+
+/* *********************ОСНОВНАЯ ЧАСТЬ********************* */
+
+.nav {
+    overflow:scroll;
+    margin-left:16px;
+    margin-bottom:24px;
+}
+
+.nav__list {
+    display:flex;   
+}
+
+
+
+.nav::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+.nav__link{
+    display:inline-block;
+    font-size:16px;
+    color:#7E7E82;
+    font-weight:500;
+    letter-spacing: -0.2px;
+    white-space:nowrap;
+    font-family:"TTLakes";
+    padding:8px 20px;
+    border:2px solid transparent;
+}
+
+.nav__link--active, .nav__link:hover {
+    border:2px solid #B8FFEC;
+    border-radius:6px;
+    background-color:white;
+}
+
+
+
+
+
+.main__section {
+    display:flex;
+    flex-direction:column;
+  
+}
+
+
+.main__section-content {
+    display:flex;
+    flex-wrap:wrap;
+    flex-direction:column;
+}
+
+.main__text {
+    display:flex;
+    flex-direction:column;
+    margin-left:16px;
+    margin-right:18px;
+    margin-bottom:16px;
+    gap:16px 0px;
+    overflow:hidden;
+    max-height:100px;
+    
+}
+
+.main__text-p {
+    text-align:left;
+    line-height: 18px;  
+    letter-spacing:0.2px;
+}
+
+
+.main__section-button {
+    position:relative;
+    display:flex;
+    align-self:flex-start;
+    background-color:#F8F8F8;
+    border:none;
+    font-family:"TTLakes";
+    font-size:16px;
+    font-weight:500;
+    letter-spacing: -0.2px;
+    margin-left:45px;
+    cursor:pointer;
+}
+
+
+.main__section-button::before {
+    position:absolute;
+    content:"";
+    display:flex;
+    width:5.6px;
+    height:5.6px;
+    border:2px solid #41F6D7;
+    border-right:none;
+    border-top:none;
+    transform:rotate(-45deg);
+    left:-20px;
+    top:9px;
+}
+
+.main__section-button::after {
+    position:absolute;
+    content:"";
+    display:flex;
+    width:5.6px;
+    height:5.6px;
+    border:2px solid #41F6D7;
+    border-right:none;
+    border-top:none;
+    transform:rotate(-45deg);
+    left:-20px;
+    top:2px;
+}
+
+
+.main__section-imgcontainer {
+    max-width:320px;
+    max-height:210px;
+    margin-top:14px;
+    margin-bottom:20px;
+}
+
+.main__section-img {
+    max-width:320px;
+    max-height:210px;
+}
+
+
+/* *************************** MIN-WIDTH:768px********************************** */
+
+@media (min-width:768px) {
+
+    .header__buttons:nth-child(2) {
+        display:flex;
+        margin-left:250px;
+    }
+
+    .header__buttons:last-child::before {
+        content:"";
+        height: 32px;
+        width: 2px;
+        background-color:#EAEAEA;
+        border-radius: 1px;
+        position:absolute;
+        left:6px;
+    }
+    
+    .header__buttons:first-child .header__button {
+        margin-left:30px;
+        margin-right:40px;
+        }  
+
+
+    .header__buttons:first-child::before {
+        content:"";
+        height: 32px;
+        width: 2px;
+        background-color:#EAEAEA;
+        border-radius: 1px;
+        position:absolute;
+        left:calc(50% + -15px);
+       }
+
+    .header__title {
+        margin-left:18px;
+        margin-bottom:32px;
+    }   
+
+
+
+/* *********************ОСНОВНАЯ ЧАСТЬ********************* */
+
+.nav {
+    margin-left:24px;
+}
+
+.main__section{
+    display:flex;
+    flex-direction:row;
+}
+
+.main__section-content {
+    display:flex;
+    flex-direction:column;
+    flex-wrap:wrap;
+    
+}
+
+
+.main__text {
+    max-height:157px;
+    margin-left:24px;
+    margin-bottom:10px;
+    gap:20px 0px;
+    overflow:hidden;
+   
+}
+
+.main__text-p {
+    text-align:left;
+    font-size:14px;
+    line-height:20px;
+    letter-spacing: 0.2px;
+}
+
+
+.main__section-button {
+    margin-left:50px;
+  }
+    
+    
+  .main__section-imgcontainer {
+    margin-left:54px;
+    display:flex;
+    min-width: 358px;
+    min-height: 209px;
+    margin-top:0;
+}
+
+.main__section-img {
+    display:flex;
+    width: 358px;
+    height: 209px;
+    border-radius:6px;
+}
+  
+
+
+}
+
+
+
+
+
+
+
+
+/* *************************** MIN-WIDTH:1120px********************************** */
+
+@media(min-width:1120px) {
+     
+     .header {
+        margin-bottom:10px;
+     }
+
+    .header__container {
+        display:flex;
+        flex-wrap:wrap;
+        flex-direction:row;
+        justify-content:space-between;
+        align-items:flex-end;
+        width:100%;
+    }
+
+    .header__menu {
+        margin-bottom:0px;
+        border-bottom:none;
+    }
+    
+
+    .header__buttons {
+        background-color:#F8F8F8;
+    }
+
+    .header__buttons:last-child::before {
+        display:none;
+    }
+
+
+    .header__buttons:first-child, .header__buttons:nth-child(2) {
+        display:none;
+    }
+    
+
+    .header__button {
+        padding-top:42px;
+        padding-bottom:0px;
+    }
+
+    .header__buttons:last-child .header__button {
+       position:relative;
+       margin-left:160px;
+    }
+
+    .header__buttons:last-child .header__button:last-child {
+        margin-right:32px;
+     }
+
+    .header__buttons:last-child .header__button:first-child::before {
+        position:absolute;
+        display:flex;
+        font-size:16px;
+        bottom:8px;
+        left:-133px;
+        font-weight:500;
+        font-family:"TTLakes", sans-serif;
+        content:"Оставить заявку"
+    }
+     
+
+    .header__buttons:last-child .header__button:last-child::before {
+        position:absolute;
+        display:flex;
+        font-size:16px;
+        bottom:8px;
+        left:-133px;
+        font-weight:500;
+        font-family:"TTLakes", sans-serif;
+        content:"Статус ремонта"
+    }
+
+    .header__text {
+        order:-1;
+        position:relative;
+    }
+
+    .header__text::before {
+        display:none;
+          }
+      
+
+
+    .header__text::after {
+        position:absolute;
+        top:42px;
+        content:"";
+        display:flex;
+        border:1px solid #41F6D7;
+        width:4px;
+        height:40px;
+        background-color:#41F6D7;
+        border-top-right-radius:5px;
+        border-bottom-right-radius:5px;
+    }
+
+    .header__title {
+        margin-top:42px;
+        margin-left:32px;
+        margin-bottom:0px;
+    }
+
+    .header__text::before {
+  display:none;
+    }
+
+
+
+/* *********************ОСНОВНАЯ ЧАСТЬ********************* */
+
+    .nav__list {
+        flex-wrap:wrap;
+        gap:6px 0;
+    }
+
+    
+    .nav {
+        margin-left:30px;
+    }
+
+   
+
+    .main__text {
+        margin-left:34px;
+        max-height:160px;
+    }
+
+
+    .main__section-button {
+        margin-left:60px;
+      }
+
+
+    .main__section-imgcontainer {
+        min-width:500px;
+        min-height:310px;
+        margin-left:46px;
+        margin-right:20px;
+    }
+
+    .main__section-img {
+        min-width: 500px;
+        min-height:310px;
+        border-radius:10px;
+    }
+
+}
